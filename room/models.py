@@ -10,7 +10,14 @@ class room(models.Model):
     house_name=models.CharField(max_length=64,verbose_name="집이름")
     house_location=models.CharField(max_length=256,verbose_name="집주소")
     master_name=models.CharField(max_length=65,verbose_name="집주인 이름")
+    
+    house_image=models.ImageField(upload_to='static/img/room/', blank=True, null=True)
+
     class Meta:
         db_table="room"
         verbose_name="방 DB"
         verbose_name_plural="방 DB"
+
+# class roomImage(models.Model):
+#     room=models.ForeignKey(room,on_delete=models.CASCADE,null=True)
+    
