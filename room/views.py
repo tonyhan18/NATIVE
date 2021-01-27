@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import room
 import random
 
@@ -18,3 +18,8 @@ def index(req):
             roomList.append(roomTemp[c])
     
     return render(req,'room/main.html',{'roomList':roomList})
+
+def rmDetail(req,id):
+    #post = get_object_or_404(room, id=id)        
+    post = room.objects.get(id=id)
+    return render(req,'room/rmDetail.html',{'roomList':post})

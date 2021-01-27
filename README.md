@@ -14,15 +14,21 @@
 # 알고리즘
 사용한 기술 스택
 - 프론트엔드 
-  - html/css/js
+  - html/css/js<br>
+  [로그인](https://akal.co.kr/?p=1560)
+  [컨셉](https://themes.getbootstrap.com/product/directory-directory-listing-bootstrap-4-theme/)
   - bootstrap
+  - 베타제작<br>
+  [피그마](https://www.figma.com/file/DhJZdLOybUTU9GnlzsGyN8/Untitled?node-id=1%3A2)
 - 백엔드
-  - Django
-  [웹 헤엄치기](https://wikidocs.net/book/4884)
+  - Django<br>
+  [웹 헤엄치기](https://wikidocs.net/book/4884)<br>
   [점프투 장고](https://wikidocs.net/book/4223)
-  - sqlite3
+  - sqlite3<br>
+  [ERD Cloud_NATIVE](https://www.erdcloud.com/d/dBSfwRgHToBfQg3f4)
 
-- 개발자 상시 Live 개발
-[TonyHan Velog](https://velog.io/@tonyhan18/%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%A7%91-%EC%98%88%EC%95%BD-%EC%84%9C%EB%B9%84%EC%8A%A4)
+- 개발자 상시 Live 개발<br>
+[TonyHan Velog](https://velog.io/@tonyhan18/%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%A7%91-%EC%98%88%EC%95%BD-%EC%84%9C%EB%B9%84%EC%8A%A4)<br>
 
-
+- 기타 정보<br>
+  - [리눅스 디렉토리 구조](https://webdir.tistory.com/101)
