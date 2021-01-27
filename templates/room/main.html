@@ -162,16 +162,12 @@
               <a class="dropdown-item spread-underline" href="comingsoon.html">기타활동</a>
             </div>
           </li>
-
-
           <li class="nav-item">
             <button class="btn btn-primary my-3 my-sm-0 ml-2 navbtn" type="submit">공간등록</button>
           </li>
           <li class="nav-item">
             <button class="btn btn-outline-primary my-3 my-sm-0 ml-2 navbtn" type="submit">로그인</button>
           </li>
-
-
         </ul>
       </div>
     </div>
@@ -229,7 +225,7 @@
           <p class="subtitle">직접 체험해 봐야하는 네이티브의 특별한 공간</p>
         </div>
         <div class="col-md-4 d-lg-flex align-items-center justify-content-end"><a class="text-muted text-sm"
-            onclick="hi1();" href="/seeall.html">
+            onclick="hi1();" href="/seeall">
             더보기<i class="fas fa-angle-double-right ml-2"></i></a></div>
       </div>
 
@@ -248,56 +244,14 @@
               </div>
               <h4 class="card-title"><a href="{% url 'rmDetail' id=list.id %}">{{list.room_name}}</a></h4>
               <p class="card-text">{{list.room_detail_s}}</p>
-              <a href="{% url 'rmDetail' id=list.id %}" class="btn btn-primary">자세히보기</a>
+              <a href="{% url 'rmDetail' id=list.id %}" class="btn btn-primary">자세히</a>
 
             </div>
           </div>
         </div>
         {% endfor %}
-
-        <!-- <div id="rm-card"class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100 ">
-                <a href="#"><img class="card-img-top" src="/static/img/7.png" alt=""></a>
-                <div class="card-body">
-                    <div style="display:inline-block; margin-bottom:15px;">
-                        <span class="badge badge-pill badge-light">tag</span>
-                        <span class="badge badge-pill badge-light">tagtag</span>
-                        <span class="badge badge-pill badge-light">tagtagtag</span>
-                    </div>
-                    <h4 class="card-title"><a href="#">방 이름을 입력하세요</a></h4>
-                    <p class="card-text">card text는 24자 이하로 받고, 18자까지 표시하고 나머지는...</p>
-                    <a href="#" class="btn btn-primary">자세히보기</a>
-    
-                </div>
-                </div>
-            </div>
-
-            <div id="rm-card"class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100 ">
-                <a href="#"><img class="card-img-top" src="img/7.png" alt=""></a>
-                <div class="card-body">
-                    <div style="display:inline-block; margin-bottom:15px;">
-                        <span class="badge badge-pill badge-light">tag</span>
-                        <span class="badge badge-pill badge-light">tagtag</span>
-                        <span class="badge badge-pill badge-light">tagtagtag</span>
-                    </div>
-                    <h4 class="card-title"><a href="#">방 이름을 입력하세요</a></h4>
-                    <p class="card-text">card text는 24자 이하로 받고, 18자까지 표시하고 나머지는...</p>
-                    <a href="#" class="btn btn-primary">자세히보기</a>
-    
-                </div>
-                </div>
-            </div>
-                            
-                              
-                              
-                          
-             
-                                            
-            </div> -->
   </section>
   <hr width=50% color="lightgray" align="center" size=30 />
-
 
 
 
@@ -311,7 +265,8 @@
             <h2><b>nativ.의 새로운 소식</b></h2>
             <p>매일 새로 업데이트 되는 새로운 소식을 빠르게 받아보세요</p>
             <form action="/" method="post">
-              <input type="email" name="email"><input type="submit" value="구독하기">
+              {% csrf_token %}
+              <input type="email" name="email" ><input type="submit" value="구독하기" onclick="function:hello();">
             </form>
           </div>
         </div>

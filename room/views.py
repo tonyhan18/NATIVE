@@ -21,5 +21,9 @@ def index(req):
 
 def rmDetail(req,id):
     #post = get_object_or_404(room, id=id)        
-    post = room.objects.get(id=id)
-    return render(req,'room/rmDetail.html',{'roomList':post})
+    roomList = room.objects.get(id=id)
+    return render(req,'room/rmDetail.html',{'roomList':roomList})
+
+def seeall(req):
+    roomList=room.objects.all()
+    return render(req, "room/seeall.html", {'roomList':roomList})

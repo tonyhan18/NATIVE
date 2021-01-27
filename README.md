@@ -15,8 +15,9 @@
 사용한 기술 스택
 - 프론트엔드 
   - html/css/js<br>
-  [로그인](https://akal.co.kr/?p=1560)
-  [컨셉](https://themes.getbootstrap.com/product/directory-directory-listing-bootstrap-4-theme/)
+  [로그인](https://akal.co.kr/?p=1560)<br>
+  [컨셉](https://themes.getbootstrap.com/product/directory-directory-listing-bootstrap-4-theme/)<br>
+  [연습](https://flukeout.github.io/)
   - bootstrap
   - 베타제작<br>
   [피그마](https://www.figma.com/file/DhJZdLOybUTU9GnlzsGyN8/Untitled?node-id=1%3A2)

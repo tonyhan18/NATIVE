@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <link href="/static/css/modern-business.css" rel="stylesheet" />
+
+  <title>Nativ | 공간 큐레이션 플랫폼</title>
+
+  <style>
+    /*가운데서 좌우로 펼쳐지는 라인 에니메이션*/
+    .spread-underline {
+      color: #333;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+    }
+
+    .spread-underline:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: #ffb000;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+
+    .spread-underline:hover:after {
+      width: 100%;
+      left: 0;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    /*가운데서 좌우로 펼쳐지는 라인 에니메이션:끝*/
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light p-3">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="/static/img/main/native_logo.png" width="80" height="32" alt="" loading="lazy">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+
+          <li class="nav-item dropdown spread-underline">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              공간
+            </a>
+            <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item spread-underline" href="comingsoon.html">주거공간</a>
+              <a class="dropdown-item spread-underline" href="comingsoon.html">공용공간</a>
+              <a class="dropdown-item spread-underline" href="comingsoon.html">사무공간</a>
+              <a class="dropdown-item spread-underline" href="comingsoon.html">기타공간</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown spread-underline">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              프로그램
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item spread-underline" href="comingsoon.html">취미</a>
+              <a class="dropdown-item spread-underline" href="comingsoon.html">원데이클래스</a>
+              <a class="dropdown-item spread-underline" href="comingsoon.html">소모임활동</a>
+              <a class="dropdown-item spread-underline" href="comingsoon.html">기타활동</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-primary my-3 my-sm-0 ml-2 navbtn" type="submit">공간등록</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-outline-primary my-3 my-sm-0 ml-2 navbtn" type="submit">로그인</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- 
+  <main>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">Album example</h1>
+          <p class="lead text-muted">
+            Something short and leading about the collection below—its
+            contents, the creator, etc. Make it short and sweet, but not too
+            short so folks don’t simply skip over it entirely.
+          </p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">Main call to action</a>
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          </p>
+        </div>
+      </div>
+    </section> -->
+
+    <section>
+      <div class="container mt-5">
+        <div class="row mt-5">
+          <div class="col-md-8">
+            <h3><b>nativ로 살아보기</b></h3>
+            <p class="subtitle">직접 체험해 봐야하는 네이티브의 특별한 공간</p>
+          </div>
+          <div class="col-md-4 d-lg-flex align-items-center justify-content-end"><a class="text-muted text-sm"
+              onclick="hi1();" href="/seeall">
+              더보기<i class="fas fa-angle-double-right ml-2"></i></a></div>
+        </div>
+  
+        <div class="row">
+  
+          {% for list in roomList %}
+          <div id="rm-card" class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100 ">
+              <a href="{% url 'rmDetail' id=list.id %}"><img class="card-img-top" src="{{list.room_image.url}}"
+                  alt=""></a>
+              <div class="card-body">
+                <div style="display:inline-block; margin-bottom:15px;">
+                  <span class="badge badge-pill badge-light">tag</span>
+                  <span class="badge badge-pill badge-light">tagtag</span>
+                  <span class="badge badge-pill badge-light">tagtagtag</span>
+                </div>
+                <h4 class="card-title"><a href="{% url 'rmDetail' id=list.id %}">{{list.room_name}}</a></h4>
+                <p class="card-text">{{list.room_detail_s}}</p>
+                <a href="{% url 'rmDetail' id=list.id %}" class="btn btn-primary">자세히</a>
+  
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+    </section>
+<!-- 
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          {% for list in roomList %}
+          <div class="col">
+            <div class="card shadow-sm">
+              <img width="100%" height="225" src="{{list.room_image.url}}" />
+
+              <div class="card-body">
+                <p class="card-text">{{list.room_detail_s}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      View
+                    </button>
+                  </div>
+                  <small class="text-muted">{{list.room_name}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </main> -->
+  <!-- Footer -->
+  <footer class="py-5 bg-light">
+    <div class="container">
+      <p class="m-0 text-center text-black">
+        Copyright &copy; wollum Corp. 2020
+      </p>
+      <br />
+      <p class="m-0 text-center text-black">
+        주소 : 서울특별시 마포구 동교로17안길 38-5(서교동 446-26번지)
+      </p>
+      <p class="m-0 text-center text-black">
+        전화번호 : 070-4104-9222 이메일 : livinglabhouse.com@gmail.com
+      </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+  <script>
+    function hi1() {
+      $("#aaa").append("준비중입니다.");
+    }
+  </script>
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

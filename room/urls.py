@@ -9,7 +9,7 @@ from .models import room
 
 urlpatterns=[
     path('',views.index),
-    
+    path('seeall',views.seeall),
     path('room/<int:id>/',views.rmDetail,name='rmDetail'),
     path('room/',views.rmDetail,name='rmDetail'),
     #path('rmDetail',views.rmDetail,name='rmDetail'),
