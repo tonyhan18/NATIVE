@@ -9,11 +9,12 @@ import random
 def index(req):
     roomTemp=room.objects.all()
     roomList=[]
-    roomList.append(roomTemp[random.randint(0,len(roomTemp)-1)])
-    for i in range(2):
-        c=random.randint(0,len(roomTemp)-1)
-        while(roomTemp[c] in roomList):
+    if(len(roomTemp)>0):
+        roomList.append(roomTemp[random.randint(0,len(roomTemp)-1)])
+        for i in range(2):
             c=random.randint(0,len(roomTemp)-1)
-        roomList.append(roomTemp[c])
+            while(roomTemp[c] in roomList):
+                c=random.randint(0,len(roomTemp)-1)
+            roomList.append(roomTemp[c])
     
     return render(req,'room/main.html',{'roomList':roomList})
