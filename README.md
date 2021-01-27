@@ -18,6 +18,11 @@
   - bootstrap
 - 백엔드
   - Django
+  [웹 헤엄치기](https://wikidocs.net/book/4884)
+  [점프투 장고](https://wikidocs.net/book/4223)
   - sqlite3
+
+- 개발자 상시 Live 개발
+[TonyHan Velog](https://velog.io/@tonyhan18/%EC%98%A8%EB%9D%BC%EC%9D%B8-%EC%A7%91-%EC%98%88%EC%95%BD-%EC%84%9C%EB%B9%84%EC%8A%A4)
 
 
