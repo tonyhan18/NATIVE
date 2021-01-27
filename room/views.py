@@ -1,8 +1,19 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render
+from .models import room
+import random
 
 # Create your views here.
 
 def index(req):
-    return render(req,'room/main.html')
+    roomTemp=room.objects.all()
+    roomList=[]
+    roomList.append(roomTemp[random.randint(0,len(roomTemp)-1)])
+    for i in range(2):
+        c=random.randint(0,len(roomTemp)-1)
+        while(roomTemp[c] in roomList):
+            c=random.randint(0,len(roomTemp)-1)
+        roomList.append(roomTemp[c])
+    
+    return render(req,'room/main.html',{'roomList':roomList})
