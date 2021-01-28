@@ -7,17 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link href="/static/css/modern-business.css" rel="stylesheet">
+  <link href="css/modern-business.css" rel="stylesheet">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 
 
 
   <!-- Bootstrap core CSS -->
-  <link href="/static/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <title>Nativ | 공간 큐레이션 플랫폼 </title>
 
@@ -120,11 +122,6 @@
       background: #0d58ba;
     }
   </style>
-
-<!--SweetAlert2-->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-
 </head>
 
 <body>
@@ -149,17 +146,10 @@
               공간
             </a>
             <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdownPortfolio">
-<<<<<<< HEAD
-              <a class="dropdown-item spread-underline" href="comingsoon">공용공간</a>
-              <a class="dropdown-item spread-underline" href="comingsoon">사무공간</a>
-              <a class="dropdown-item spread-underline" href="comingsoon">기타공간</a>
-              <a class="dropdown-item spread-underline" href="comingsoon">주거공간</a>
-=======
               <a class="dropdown-item spread-underline" href="/404">주거공간</a>
               <a class="dropdown-item spread-underline" href="/404">공용공간</a>
               <a class="dropdown-item spread-underline" href="/404">사무공간</a>
               <a class="dropdown-item spread-underline" href="/404">기타공간</a>
->>>>>>> 12d61b79587bb14f22b38016a5943220f7b7ecb2
             </div>
           </li>
           <li class="nav-item dropdown spread-underline">
@@ -168,148 +158,113 @@
               프로그램
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-<<<<<<< HEAD
-              <a class="dropdown-item spread-underline" href="comingsoon">취미</a>
-              <a class="dropdown-item spread-underline" href="comingsoon">원데이클래스</a>
-              <a class="dropdown-item spread-underline" href="comingsoon">소모임활동</a>
-              <a class="dropdown-item spread-underline" href="comingsoon">기타활동</a>
-=======
               <a class="dropdown-item spread-underline" href="/404">취미</a>
               <a class="dropdown-item spread-underline" href="/404">원데이클래스</a>
               <a class="dropdown-item spread-underline" href="/404">소모임활동</a>
               <a class="dropdown-item spread-underline" href="/404">기타활동</a>
->>>>>>> 12d61b79587bb14f22b38016a5943220f7b7ecb2
             </div>
           </li>
           <li class="nav-item">
             <button class="btn btn-primary my-3 my-sm-0 ml-2 navbtn" type="submit">공간등록</button>
           </li>
           <li class="nav-item">
-            <button class="btn btn-outline-primary my-3 my-sm-0 ml-2 navbtn" type="submit"><a href="users/login">로그인</a></button>
+            <button class="btn btn-outline-primary my-3 my-sm-0 ml-2 navbtn" type="submit"><a href="/users/login">로그인</a></button>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- carousel 관련 -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('/static/img/front/front1.png');">
-        <div class="carousel-caption d-none d-md-block">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
-      <!-- Slide Two - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('/static/img/front/front2.png');">
-        <div class="carousel-caption d-none d-md-block">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
-      <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('/static/img/front/front3.jpg');">
-        <div class="carousel-caption d-none d-md-block">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
-    </div>
+  <section>
+    <iframe src="/room/slide" width="100%" height="400px" scrolling="no" frameborder="0" marginwidth="0"></iframe>
+  </section>
 
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
 
-  <!-- card 관련 -->
-  <!-- Portfolio Section -->
 
   <section>
     <div class="container mt-5">
-      <div class="row mt-5">
-        <div class="col-md-8">
-          <h3><b>nativ로 살아보기</b></h3>
-          <p class="subtitle">직접 체험해 봐야하는 네이티브의 특별한 공간</p>
-        </div>
-        <div class="col-md-4 d-lg-flex align-items-center justify-content-end"><a class="text-muted text-sm"
-<<<<<<< HEAD
-            onclick="hi1();" href="rooms">
-=======
-            onclick="hi1();" href="/rooms">
->>>>>>> 12d61b79587bb14f22b38016a5943220f7b7ecb2
-            더보기<i class="fas fa-angle-double-right ml-2"></i></a></div>
+      <div class="mt-2">
+        <img src="/static/img/main/pin.png" style="width:20px;"><span class="m-1">Seoul, Hongdae</span>
+        <h1 class="mt-2"><b>홍대에서 살고 있는 네이티브의 집</b></h1>
+        <p>셰어하우스(단독주택)</p>
+        <hr width=100% color="lightgray" align="left" size=30 />
+
+
       </div>
 
-      <div class="row">
-
-        {% for list in roomList %}
-        <div id="rm-card" class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100 ">
-            <a href="{% url 'details' id=list.id %}"><img class="card-img-top" src="{{list.room_image.url}}"
-                alt=""></a>
-            <div class="card-body">
-              <div style="display:inline-block; margin-bottom:15px;">
-                <span class="badge badge-pill badge-light">tag</span>
-                <span class="badge badge-pill badge-light">tagtag</span>
-                <span class="badge badge-pill badge-light">tagtagtag</span>
-              </div>
-              <h4 class="card-title"><a href="{% url 'details' id=list.id %}">{{list.room_name}}</a></h4>
-              <p class="card-text">{{list.room_detail_s}}</p>
-              <a href="{% url 'details' id=list.id %}" class="btn btn-primary">자세히</a>
-
-            </div>
-          </div>
+      <div class="content mt-2">
+        <div>
+          <h6><b>한줄설명</b></h6>
+          <p>조용한 주택가에 자리한 크리에이티브한 단독주택이며, 아티스트들이 모여살고 있습니다!</p>
         </div>
-        {% endfor %}
+        <hr width=100% color="lightgray" align="left" size=30 />
+        <div>
+          <h6><b>상세설명</b></h6>
+          <p>Welcome to Brooklyn! We are excited to share our wonderful neighborhood with you. Our modern apartment has
+            a private entrance, fully equipped kitchen, and a very comfortable queen size bed. We are happy to
+            accommodate additional guests with a single bed in the living room, another comfy mattress on the floor and
+            can make arrangements for small children with a portable crib and highchair if requested.</p>
+        </div>
+        <div>
+          <p>어메니티 :</p>
+          <ul>
+            <li>Kitchen</li>
+            <li>Laundary Room</li>
+            <li>Lounge</li>
+            <li>Rooptop</li>
+            <li>Basement</li>
+            <li>Tv and Iptv</li>
+            <li>Wi-fi & Internet</li>
+            <li>Sampoo & Bodywash</li>
+            <li>Funiture & Household goods</li>
+          </ul>
+        </div>
+        <iframe src="/room/slide2" width="100%" height="300px" scrolling="no" frameborder="0" marginwidth="0"></iframe>
+        <hr width=100% color="lightgray" align="left" size=30 />
+        <div style="display:inline-block; margin-bottom:15px;">
+          <h6><b>키워드</b></h6>
+          <span class="badge badge-pill badge-light">tag</span>
+          <span class="badge badge-pill badge-light">tagtag</span>
+          <span class="badge badge-pill badge-light">tagtagtag</span>
+          <span class="badge badge-pill badge-light">tagtagtag</span>
+          <span class="badge badge-pill badge-light">tagtagtag</span>
+        </div>
+
+        <div id="staticMap" style="width:600px; height:350px; border:1px; "></div>
+
+        <script type="text/javascript"
+          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1679cc80ef55f74e3ff09fead54ccdab"></script>
+        <script>
+          var staticMapContainer = document.getElementById('staticMap'), // 이미지 지도를 표시할 div  
+            staticMapOption = {
+              center: new kakao.maps.LatLng(33.450701, 126.570667), // 이미지 지도의 중심좌표
+              level: 3 // 이미지 지도의 확대 레벨
+            };
+
+          // 이미지 지도를 표시할 div와 옵션으로 이미지 지도를 생성합니다
+          var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
+        </script>
+
+
+
+
+      </div>
+
+    </div>
+
+
+    </div>
   </section>
-  <hr width=50% color="lightgray" align="center" size=30 />
-  
+
+
+
+
+
   <!-- Footer -->
   <footer id="footer">
     <div class="footer-newsletter text-center">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <img src="/static/img/main/8.png" width="400" alt="" loading="lazy" style="margin-bottom:20px;">
-            <h2><b>nativ.의 새로운 소식</b></h2>
-            <p>매일 새로 업데이트 되는 새로운 소식을 빠르게 받아보세요</p>
-            <form action="/" method="post" class="form-control">
-              {% csrf_token %}
-<<<<<<< HEAD
-              <input class="form-control" type="email" name="email" required autofocus>
-              <button class = "btn btn-primary btn-block " id="alertStart" type="button" value="구독하기">
-=======
-              <input type="email" name="email" ><input type="submit" value="구독하기" >
->>>>>>> 12d61b79587bb14f22b38016a5943220f7b7ecb2
-            </form>
-          </div>
-        </div>
-      </div>
+
     </div>
-    <script>
-    $().ready(function () {
-                $("#alertStart").click(function () {
-                    Swal.fire({
-                        icon: 'success',
-                        title: '구독신청 완료되었습니다!',
-                        text: '유익한 정보를 제공하도록 최선을 다하겠습니다.',
-                    });
-                });
-            });
-            
-    </script>
 
     <div class="footer-bottom pt-5 pb-5 bg-light">
 
@@ -329,6 +284,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Demo styles -->
+    <style>
+        html,
+        body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: #fff;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-slide {
+            width: 200px;
+            height: 300px;
+            background: #882525;
+            line-height:550px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container" id="swiper-container2" style="width:1200px;">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide active-slider" style="background-image:url(/static/img/main/10.png);">
+                1 / 8</div>
+            <div class="swiper-slide" style="background-image:url(/static/img/main/10.png);">
+                2 / 8</div>
+            <div class="swiper-slide" style="background-image:url(/static/img/main/10.png);">
+                3 / 8</div>
+            <div class="swiper-slide" style="background-image:url(/static/img/main/10.png);">
+                4 / 8</div>
+            <div class="swiper-slide" style="background-image:url(/static/img/main/10.png);">
+                5 / 8</div>
+            <div class="swiper-slide" style="background-image:url(/static/img/main/10.png);">
+                6 / 8</div>
+            <div class="swiper-slide" style="background-image:url(/static/img/main/10.png);">
+                7 / 8</div>
+            <div class="swiper-slide" style="background-image:url(/static/img/main/10.png);">
+                8 / 8</div>
+        </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var mySwiper2 = new Swiper('#swiper-container2', {
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+            slidesPerView: 3
+
+        })
+    </script>
+
+</body>
+
+</html>
