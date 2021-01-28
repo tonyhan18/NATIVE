@@ -9,10 +9,11 @@ from .models import room
 
 urlpatterns=[
     path('',views.index),
-    path('seeall',views.seeall),
-    path('room/<int:id>/',views.rmDetail,name='rmDetail'),
-    path('room/',views.rmDetail,name='rmDetail'),
+    path('rooms',views.rooms),
+    path('room/<int:id>/',views.detail,name='details'),
+    path('room/',views.detail,name='details'),
     #path('rmDetail',views.rmDetail,name='rmDetail'),
+    path('404/',views.notFound,name='404'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
