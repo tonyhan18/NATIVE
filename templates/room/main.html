@@ -120,6 +120,11 @@
       background: #0d58ba;
     }
   </style>
+
+<!--SweetAlert2-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 </head>
 
 <body>
@@ -144,10 +149,10 @@
               공간
             </a>
             <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdownPortfolio">
-              <a class="dropdown-item spread-underline" href="comingsoon.html">주거공간</a>
-              <a class="dropdown-item spread-underline" href="comingsoon.html">공용공간</a>
-              <a class="dropdown-item spread-underline" href="comingsoon.html">사무공간</a>
-              <a class="dropdown-item spread-underline" href="comingsoon.html">기타공간</a>
+              <a class="dropdown-item spread-underline" href="comingsoon">공용공간</a>
+              <a class="dropdown-item spread-underline" href="comingsoon">사무공간</a>
+              <a class="dropdown-item spread-underline" href="comingsoon">기타공간</a>
+              <a class="dropdown-item spread-underline" href="comingsoon">주거공간</a>
             </div>
           </li>
           <li class="nav-item dropdown spread-underline">
@@ -156,10 +161,10 @@
               프로그램
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-              <a class="dropdown-item spread-underline" href="comingsoon.html">취미</a>
-              <a class="dropdown-item spread-underline" href="comingsoon.html">원데이클래스</a>
-              <a class="dropdown-item spread-underline" href="comingsoon.html">소모임활동</a>
-              <a class="dropdown-item spread-underline" href="comingsoon.html">기타활동</a>
+              <a class="dropdown-item spread-underline" href="comingsoon">취미</a>
+              <a class="dropdown-item spread-underline" href="comingsoon">원데이클래스</a>
+              <a class="dropdown-item spread-underline" href="comingsoon">소모임활동</a>
+              <a class="dropdown-item spread-underline" href="comingsoon">기타활동</a>
             </div>
           </li>
           <li class="nav-item">
@@ -225,7 +230,7 @@
           <p class="subtitle">직접 체험해 봐야하는 네이티브의 특별한 공간</p>
         </div>
         <div class="col-md-4 d-lg-flex align-items-center justify-content-end"><a class="text-muted text-sm"
-            onclick="hi1();" href="/seeall">
+            onclick="hi1();" href="rooms">
             더보기<i class="fas fa-angle-double-right ml-2"></i></a></div>
       </div>
 
@@ -252,9 +257,7 @@
         {% endfor %}
   </section>
   <hr width=50% color="lightgray" align="center" size=30 />
-
-
-
+  
   <!-- Footer -->
   <footer id="footer">
     <div class="footer-newsletter text-center">
@@ -264,14 +267,27 @@
             <img src="/static/img/main/8.png" width="400" alt="" loading="lazy" style="margin-bottom:20px;">
             <h2><b>nativ.의 새로운 소식</b></h2>
             <p>매일 새로 업데이트 되는 새로운 소식을 빠르게 받아보세요</p>
-            <form action="/" method="post">
+            <form action="/" method="post" class="form-control">
               {% csrf_token %}
-              <input type="email" name="email" ><input type="submit" value="구독하기" onclick="function:hello();">
+              <input class="form-control" type="email" name="email" required autofocus>
+              <button class = "btn btn-primary btn-block " id="alertStart" type="button" value="구독하기">
             </form>
           </div>
         </div>
       </div>
     </div>
+    <script>
+    $().ready(function () {
+                $("#alertStart").click(function () {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '구독신청 완료되었습니다!',
+                        text: '유익한 정보를 제공하도록 최선을 다하겠습니다.',
+                    });
+                });
+            });
+            
+    </script>
 
     <div class="footer-bottom pt-5 pb-5 bg-light">
 

@@ -26,4 +26,7 @@ def rmDetail(req,id):
 
 def seeall(req):
     roomList=room.objects.all()
-    return render(req, "room/seeall.html", {'roomList':roomList})
+    return render(req, "room/rooms.html", {'roomList':roomList})
+
+def comingsoon(req):
+    return render(req, "room/comingsoon.html")
