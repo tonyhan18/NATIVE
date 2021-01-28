@@ -31,4 +31,8 @@ def rooms(req):
 def notFound(req):
     return render(req,'comingsoon.html')
 
-    
+def slide(req):
+    return render(req,'room/slide.html')
+
+def slide2(req):
+    return render(req,'room/slide2.html')
