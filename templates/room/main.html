@@ -188,7 +188,7 @@
     </ol>
     <div class="carousel-inner" role="listbox">
       <!-- Slide One - Set the background image for this slide in the line below -->
-      <div class="carousel-item active" style="background-image: url('/static/img/front/front1.png');">
+      <div class="carousel-item active" style="background-image: url('/static/img/front/front4.png');">
         <div class="carousel-caption d-none d-md-block">
           <h3></h3>
           <p></p>
@@ -202,7 +202,7 @@
         </div>
       </div>
       <!-- Slide Three - Set the background image for this slide in the line below -->
-      <div class="carousel-item" style="background-image: url('/static/img/front/front3.jpg');">
+      <div class="carousel-item" style="background-image: url('/static/img/front/front1.png');">
         <div class="carousel-caption d-none d-md-block">
           <h3></h3>
           <p></p>
@@ -271,7 +271,7 @@
             <p>매일 새로 업데이트 되는 새로운 소식을 빠르게 받아보세요</p>
             <form action="/" method="post" class="form-control">
               {% csrf_token %}
-              <input class="form-control" type="email" name="email" required><input type="submit" id="alertStart" value="구독하기" >
+              <input class="form-control btn-group" type="email" name="email" required><input type="button" class="btn btn-primary form-control btn-group" id="alertStart" value="구독하기" >
             </form>
           </div>
         </div>
