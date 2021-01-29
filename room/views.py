@@ -27,11 +27,6 @@ def detail(req,id):
 def rooms(req):
     roomList=room.objects.all()
     return render(req, "room/rooms.html", {'roomList':roomList})
-
-<<<<<<< HEAD
-def comingsoon(req):
-    return render(req, "room/comingsoon.html")
-=======
 def notFound(req):
     return render(req,'comingsoon.html')
 
@@ -40,4 +35,4 @@ def slide(req):
 
 def slide2(req):
     return render(req,'room/slide2.html')
->>>>>>> 12d61b79587bb14f22b38016a5943220f7b7ecb2
+
