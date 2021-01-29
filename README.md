@@ -10,6 +10,15 @@
 1. 사람이 다함께 쉴 수 있는 집을 만듭니다.
 2. 집에서 할 수 있는 활동을 만듭니다.
 
+# 실행방법
+`apt install pip`
+`apt install python3-venv`
+`python3 -m venv .venv`
+`source .venv/bin/activate`
+`pip install -r requirements.txt`
+`python3 manage.py makemigrations`
+`python3 manage.py migrate`
+`python3 manage.py runserver 0.0.0.0:8000`
 
 # 알고리즘
 사용한 기술 스택
