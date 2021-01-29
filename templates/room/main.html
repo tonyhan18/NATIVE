@@ -17,7 +17,7 @@
 
 
   <!-- Bootstrap core CSS -->
-  <link href="/static/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <title>Nativ | 공간 큐레이션 플랫폼 </title>
 
@@ -121,9 +121,9 @@
     }
   </style>
 
-<!--SweetAlert2-->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <!--SweetAlert2-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 </head>
 
@@ -149,17 +149,10 @@
               공간
             </a>
             <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdownPortfolio">
-<<<<<<< HEAD
-              <a class="dropdown-item spread-underline" href="comingsoon">공용공간</a>
-              <a class="dropdown-item spread-underline" href="comingsoon">사무공간</a>
-              <a class="dropdown-item spread-underline" href="comingsoon">기타공간</a>
-              <a class="dropdown-item spread-underline" href="comingsoon">주거공간</a>
-=======
-              <a class="dropdown-item spread-underline" href="/404">주거공간</a>
               <a class="dropdown-item spread-underline" href="/404">공용공간</a>
               <a class="dropdown-item spread-underline" href="/404">사무공간</a>
               <a class="dropdown-item spread-underline" href="/404">기타공간</a>
->>>>>>> 12d61b79587bb14f22b38016a5943220f7b7ecb2
+              <a class="dropdown-item spread-underline" href="/404">주거공간</a>
             </div>
           </li>
           <li class="nav-item dropdown spread-underline">
@@ -168,24 +161,18 @@
               프로그램
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-<<<<<<< HEAD
-              <a class="dropdown-item spread-underline" href="comingsoon">취미</a>
-              <a class="dropdown-item spread-underline" href="comingsoon">원데이클래스</a>
-              <a class="dropdown-item spread-underline" href="comingsoon">소모임활동</a>
-              <a class="dropdown-item spread-underline" href="comingsoon">기타활동</a>
-=======
               <a class="dropdown-item spread-underline" href="/404">취미</a>
               <a class="dropdown-item spread-underline" href="/404">원데이클래스</a>
               <a class="dropdown-item spread-underline" href="/404">소모임활동</a>
               <a class="dropdown-item spread-underline" href="/404">기타활동</a>
->>>>>>> 12d61b79587bb14f22b38016a5943220f7b7ecb2
             </div>
-          </li>
+          </li> 
           <li class="nav-item">
             <button class="btn btn-primary my-3 my-sm-0 ml-2 navbtn" type="submit">공간등록</button>
           </li>
           <li class="nav-item">
-            <button class="btn btn-outline-primary my-3 my-sm-0 ml-2 navbtn" type="submit"><a href="users/login">로그인</a></button>
+            <button class="btn btn-outline-primary my-3 my-sm-0 ml-2 navbtn" type="submit"><a
+                href="/users/login">로그인</a></button>
           </li>
         </ul>
       </div>
@@ -244,11 +231,7 @@
           <p class="subtitle">직접 체험해 봐야하는 네이티브의 특별한 공간</p>
         </div>
         <div class="col-md-4 d-lg-flex align-items-center justify-content-end"><a class="text-muted text-sm"
-<<<<<<< HEAD
-            onclick="hi1();" href="rooms">
-=======
             onclick="hi1();" href="/rooms">
->>>>>>> 12d61b79587bb14f22b38016a5943220f7b7ecb2
             더보기<i class="fas fa-angle-double-right ml-2"></i></a></div>
       </div>
 
@@ -257,8 +240,7 @@
         {% for list in roomList %}
         <div id="rm-card" class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100 ">
-            <a href="{% url 'details' id=list.id %}"><img class="card-img-top" src="{{list.room_image.url}}"
-                alt=""></a>
+            <a href="{% url 'details' id=list.id %}"><img class="card-img-top" src="{{list.room_image.url}}" alt=""></a>
             <div class="card-body">
               <div style="display:inline-block; margin-bottom:15px;">
                 <span class="badge badge-pill badge-light">tag</span>
@@ -275,7 +257,7 @@
         {% endfor %}
   </section>
   <hr width=50% color="lightgray" align="center" size=30 />
-  
+
   <!-- Footer -->
   <footer id="footer">
     <div class="footer-newsletter text-center">
@@ -287,28 +269,23 @@
             <p>매일 새로 업데이트 되는 새로운 소식을 빠르게 받아보세요</p>
             <form action="/" method="post" class="form-control">
               {% csrf_token %}
-<<<<<<< HEAD
-              <input class="form-control" type="email" name="email" required autofocus>
-              <button class = "btn btn-primary btn-block " id="alertStart" type="button" value="구독하기">
-=======
-              <input type="email" name="email" ><input type="submit" value="구독하기" >
->>>>>>> 12d61b79587bb14f22b38016a5943220f7b7ecb2
+              <input class="form-control" type="email" name="email" required><input type="submit" id="alertStart" value="구독하기" >
             </form>
           </div>
         </div>
       </div>
     </div>
     <script>
-    $().ready(function () {
-                $("#alertStart").click(function () {
-                    Swal.fire({
-                        icon: 'success',
-                        title: '구독신청 완료되었습니다!',
-                        text: '유익한 정보를 제공하도록 최선을 다하겠습니다.',
-                    });
-                });
-            });
-            
+      $().ready(function () {
+        $("#alertStart").click(function () {
+          Swal.fire({
+            icon: 'success',
+            title: '구독신청 완료되었습니다!',
+            text: '유익한 정보를 제공하도록 최선을 다하겠습니다.',
+          });
+        });
+      });
+
     </script>
 
     <div class="footer-bottom pt-5 pb-5 bg-light">
