@@ -11,14 +11,26 @@
 2. 집에서 할 수 있는 활동을 만듭니다.
 
 # 실행방법
-`apt install pip`
-`apt install python3-venv`
-`python3 -m venv .venv`
-`source .venv/bin/activate`
-`pip install -r requirements.txt`
-`python3 manage.py makemigrations`
-`python3 manage.py migrate`
-`python3 manage.py runserver 0.0.0.0:8000`
+
+가상환경 설치<br>
+
+`apt install pip`<br>
+`apt install python3-venv`<br>
+`python3 -m venv .venv`<br>
+`source .venv/bin/activate`<br>
+
+필수 패키지 설치<br>
+
+`pip install -r requirements.txt`<br>
+
+DB 제작<br>
+
+`python3 manage.py makemigrations`<br>
+`python3 manage.py migrate`<br>
+
+서버 운영<br>
+
+`python3 manage.py runserver 0.0.0.0:8000`<br>
 
 # 알고리즘
 사용한 기술 스택
