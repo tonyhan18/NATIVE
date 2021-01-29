@@ -14,7 +14,6 @@ urlpatterns=[
     path('room/',views.detail,name='details'),
     path('room/slide/',views.slide,name='slide'),
     path('room/slide2/',views.slide2,name='slide2'),
-    #path('rmDetail',views.rmDetail,name='rmDetail'),
     path('404/',views.notFound,name='404'),
 ]
 

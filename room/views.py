@@ -31,9 +31,9 @@ def detail(req,id):
     return render(req,'room/details.html',{'roomList':roomList})
 
 def rooms(req):
-    roomList=room.objects.all()
+    roomList = room.objects.all()
     return render(req, "room/rooms.html", {'roomList':roomList})
-
+    
 def notFound(req):
     return render(req,'comingsoon.html')
 
