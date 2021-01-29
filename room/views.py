@@ -9,6 +9,11 @@ import random
 def index(req):
     roomTemp=room.objects.all()
     roomList=[]
+    try:
+        user_id=req.session.get('user')
+    except:
+        user_id=None
+    
     if(len(roomTemp)>0):
         roomList.append(roomTemp[random.randint(0,len(roomTemp)-1)])
         for i in range(2):
@@ -16,7 +21,8 @@ def index(req):
             while(roomTemp[c] in roomList):
                 c=random.randint(0,len(roomTemp)-1)
             roomList.append(roomTemp[c])
-    
+
+
     return render(req,'room/main.html',{'roomList':roomList})
 
 def detail(req,id):
@@ -36,4 +42,3 @@ def slide(req):
 
 def slide2(req):
     return render(req,'room/slide2.html')
-

@@ -17,7 +17,7 @@
 
 
   <!-- Bootstrap core CSS -->
-  <link href="/static/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <title>Nativ | 공간 큐레이션 플랫폼 </title>
 
@@ -121,9 +121,9 @@
     }
   </style>
 
-<!--SweetAlert2-->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <!--SweetAlert2-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 </head>
 
@@ -166,12 +166,13 @@
               <a class="dropdown-item spread-underline" href="/404">소모임활동</a>
               <a class="dropdown-item spread-underline" href="/404">기타활동</a>
             </div>
-          </li>
+          </li> 
           <li class="nav-item">
             <button class="btn btn-primary my-3 my-sm-0 ml-2 navbtn" type="submit">공간등록</button>
           </li>
           <li class="nav-item">
-            <button class="btn btn-outline-primary my-3 my-sm-0 ml-2 navbtn" type="submit"><a href="users/login">로그인</a></button>
+            <button class="btn btn-outline-primary my-3 my-sm-0 ml-2 navbtn" type="submit"><a
+                href="/users/login">로그인</a></button>
           </li>
         </ul>
       </div>
@@ -241,8 +242,7 @@
         {% for list in roomList %}
         <div id="rm-card" class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100 ">
-            <a href="{% url 'details' id=list.id %}"><img class="card-img-top" src="{{list.room_image.url}}"
-                alt=""></a>
+            <a href="{% url 'details' id=list.id %}"><img class="card-img-top" src="{{list.room_image.url}}" alt=""></a>
             <div class="card-body">
               <div style="display:inline-block; margin-bottom:15px;">
                 <span class="badge badge-pill badge-light">tag</span>
@@ -259,7 +259,7 @@
         {% endfor %}
   </section>
   <hr width=50% color="lightgray" align="center" size=30 />
-  
+
   <!-- Footer -->
   <footer id="footer">
     <div class="footer-newsletter text-center">
@@ -271,25 +271,23 @@
             <p>매일 새로 업데이트 되는 새로운 소식을 빠르게 받아보세요</p>
             <form action="/" method="post" class="form-control">
               {% csrf_token %}
-              <input class="form-control" type="email" name="email" required>
-              <button class = "btn btn-primary btn-block " id="alertStart" type="button" value="구독하기"> >
-
+              <input class="form-control" type="email" name="email" required><input type="submit" id="alertStart" value="구독하기" >
             </form>
           </div>
         </div>
       </div>
     </div>
     <script>
-    $().ready(function () {
-                $("#alertStart").click(function () {
-                    Swal.fire({
-                        icon: 'success',
-                        title: '구독신청 완료되었습니다!',
-                        text: '유익한 정보를 제공하도록 최선을 다하겠습니다.',
-                    });
-                });
-            });
-            
+      $().ready(function () {
+        $("#alertStart").click(function () {
+          Swal.fire({
+            icon: 'success',
+            title: '구독신청 완료되었습니다!',
+            text: '유익한 정보를 제공하도록 최선을 다하겠습니다.',
+          });
+        });
+      });
+
     </script>
 
     <div class="footer-bottom pt-5 pb-5 bg-light">

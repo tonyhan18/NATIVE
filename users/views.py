@@ -13,7 +13,6 @@ def signup(req):
     return render(req,'users/signup.html')
 
 def signup_verification(req):
-    
     if(req.method == 'GET'):
         return redirect('/users/signup')
     elif(req.method=='POST'):
@@ -22,22 +21,30 @@ def signup_verification(req):
         userNa = req.POST['una']
         userAd = req.POST['uad']
         userPh = req.POST['uph']
-        # userTemp = Users.objects.get(userId=userId)
-        # err={}
-        # if(userTemp.userId == userId):
-        #     err['err']='중복된 ID 입니다.'
-        #     return render(req,'users/signup.html',err)
-        # else:
-        users=Users(
-            userId=userId,
-            userPw=userPw,
-            userName=userNa,
-            userAddress=userAd,
-            userPhone=userPh
-        )
-        users.save()
-        return redirect('/')
+
+        try:
+            userTemp = Users.objects.get(userId=userId)
+        except:
+            userTemp=None
+
+        err={}
+        if(userTemp and userTemp.userId == userId):
+            err['err']='중복된 ID 입니다.'
+            return render(req,'users/signup.html',err)
+        else:
+            users=Users(
+                userId=userId,
+                userPw=userPw,
+                userName=userNa,
+                userAddress=userAd,
+                userPhone=userPh
+            )
+            users.save()
+            return redirect('/users/signup/verify/success')
     return redirect('/users/signup')
+
+def signup_success(req):
+    return render(req,'users/signup_success.html')
 
 def login_verification(req):
     #print(dir(req))
