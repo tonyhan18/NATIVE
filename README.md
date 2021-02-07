@@ -3,7 +3,7 @@
 사람과 사람을 연결하는 내 주변의 이웃과의 연결을 주도하는  플랫폼 Paas입니다.<br>
 여러분의 기쁨과 희망찬 내일을 응원합니다!<br>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jmaPfFmlKlw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+!youtube[jmaPfFmlKlw]<br><br>
 
 # 프로젝트 추진 배경
 다른사람과의 여행, 경험, 운명적 만남등 모든 것에서는 새로운 혹은 친숙한 타인이 필요합니다.<br>
