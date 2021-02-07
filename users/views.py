@@ -54,7 +54,7 @@ def login_verification(req):
         #유저 email이 제대로 들어오지 않아도 표현은 된다.
         userId = req.POST.get('uid', None)
         userPw = req.POST.get('upw', None)
-        print('hello')
+        
         try:
             userObjId = Users.objects.get(userId=userId)
         except:

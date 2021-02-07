@@ -1,10 +1,15 @@
 # NATIVE 프로젝트
 
-사람과 사람을 연결하는 내 주변의 이웃과의 연결을 주도하는  플랫폼 Paas입니다.
-여러분의 기쁨과 희망찬 내일을 응원합니다!
+사람과 사람을 연결하는 내 주변의 이웃과의 연결을 주도하는  플랫폼 Paas입니다.<br>
+여러분의 기쁨과 희망찬 내일을 응원합니다!<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jmaPfFmlKlw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
 
 # 프로젝트 추진 배경
-다른사람과의 여행, 경험, 운명적 만남등 모든 것에서는 새로운 혹은 친숙한 타인이 필요합니다. 하지만 만나는 것만큼이나 이벤트역시 중요합니다. 보다 긍정적인 활동이 보다 건강한 관계를 만듭니다. NATIVE는 바로 이 사람과 사람간의 이벤트에 집중합니다.
+다른사람과의 여행, 경험, 운명적 만남등 모든 것에서는 새로운 혹은 친숙한 타인이 필요합니다.<br>
+하지만 만나는 것만큼이나 이벤트역시 중요합니다. <br>
+보다 긍정적인 활동이 보다 건강한 관계를 만듭니다. <br>
+NATIVE는 바로 이 사람과 사람간의 이벤트에 집중합니다.
 
 # 어떻게 푸는가?
 1. 사람이 다함께 쉴 수 있는 집을 만듭니다.
