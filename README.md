@@ -3,7 +3,7 @@
 사람과 사람을 연결하는 내 주변의 이웃과의 연결을 주도하는  플랫폼 Paas입니다.<br>
 여러분의 기쁨과 희망찬 내일을 응원합니다!<br>
 
-![https://youtu.be/jmaPfFmlKlw](jmaPfFmlKlw)
+![https://youtu.be/jmaPfFmlKlw](https://youtu.be/jmaPfFmlKlw)
 <br><br>
 
 # 프로젝트 추진 배경
